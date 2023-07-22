@@ -14,9 +14,12 @@
 (() => {
     const imagens = [
 	    {
-	    	url: "http://h3place.ddns.net/h3place3.png",
-		x: 1241,
-		y: 344,
+	    	//url: "http://h3place.ddns.net/h3place3.png",
+            url: "http://h3place.ddns.net/entireboardwithh3.png",
+		//x: 1241,
+		//y: 344,
+        x: -500,
+		y: -500,
 	    },
     ];
 
