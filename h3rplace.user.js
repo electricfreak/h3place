@@ -13,11 +13,11 @@
 
 (() => {
     const imagens = [
-	    {
-            	url: "http://h3place.ddns.net/entireboardwithh3.png",
-        	x: -500,
-		y: -500,
-	    },
+        {
+            url: "http://h3place.ddns.net/entireboardwithh3_v2.png",
+            x: -500,
+            y: -500,
+        },
     ];
 
     const getData = async (url) => {
@@ -103,11 +103,11 @@
 
         oldImages[imagem.url] = newImage;
         const canvasContainer = document.getElementsByTagName('garlic-bread-embed')[0]
-	        .shadowRoot.children[0]
-	        .getElementsByTagName('garlic-bread-share-container')[0]
-	        .getElementsByTagName('garlic-bread-camera')[0]
-	        .getElementsByTagName('garlic-bread-canvas')[0]
-	        .shadowRoot.children[0];
+            .shadowRoot.children[0]
+            .getElementsByTagName('garlic-bread-share-container')[0]
+            .getElementsByTagName('garlic-bread-camera')[0]
+            .getElementsByTagName('garlic-bread-canvas')[0]
+            .shadowRoot.children[0];
 
         canvasContainer.insertBefore(newImage, canvasContainer.firstChild);
     };
@@ -115,7 +115,7 @@
     if (window.top !== window.self) {
         window.addEventListener("load", () => {
             imagens.forEach(addImage);
-            setInterval(addImage, 60 * 1000);
+            setInterval(() => imagens.forEach(addImage), 60000); // Fetch image every 2 seconds
         }, false);
     }
 })();
